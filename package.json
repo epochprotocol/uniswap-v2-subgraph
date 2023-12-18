@@ -1,18 +1,20 @@
 {
-  "name": "uni-v2-subgraph",
+  "name": "uniswap-v2",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ abhimanyu121/uni-v2-subgraph",
-    "create-local": "graph create --node http://localhost:8020/ abhimanyu121/uni-v2-subgraph",
-    "remove-local": "graph remove --node http://localhost:8020/ abhimanyu121/uni-v2-subgraph",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 abhimanyu121/uni-v2-subgraph",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ abhimanyu121/uniswap-v2",
+    "create-local": "graph create --node http://localhost:8020/ abhimanyu121/uniswap-v2",
+    "remove-local": "graph remove --node http://localhost:8020/ abhimanyu121/uniswap-v2",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 abhimanyu121/uniswap-v2",
     "test": "graph test"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.64.0",
     "@graphprotocol/graph-ts": "0.32.0"
   },
-  "devDependencies": { "matchstick-as": "0.5.0" }
+  "devDependencies": {
+    "matchstick-as": "0.5.0"
+  }
 }

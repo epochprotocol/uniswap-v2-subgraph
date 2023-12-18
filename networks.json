@@ -3,6 +3,12 @@
     "UniswapV2Factory": {
       "address": "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
       "startBlock": 10000835
+    },
+    "UniswapV2Pair": {
+      "address": "0x9Be9F8b6A8AEd8062ce459373611Add704Cc3AfE"
+    },
+    "ERC20": {
+      "address": "0x28Cca76f6e8eC81e4550ecd761f899110b060E97"
     }
   }
 }
