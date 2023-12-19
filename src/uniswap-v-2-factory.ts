@@ -23,16 +23,16 @@ export function handlePairCreated(event: PairCreatedEvent): void {
     }
     let tryDecimals = tokenInstance.try_decimals();
     if (!tryDecimals.reverted) {
-      token0.decimals = BigInt.fromString(tryDecimals.value.toString());
+      token0.decimals = tryDecimals.value;
     } else {
-      token0.decimals = BigInt.fromString("18");
+      token0.decimals = 18;
     }
-    token0.save();
   }
 
   let token1 = Token.load(event.params.token1);
   if (token1 === null) {
     token1 = new Token(event.params.token1);
+
     let tokenInstance = ERC20.bind(event.params.token1);
     let tryName = tokenInstance.try_name();
     if (!tryName.reverted) {
@@ -48,20 +48,22 @@ export function handlePairCreated(event: PairCreatedEvent): void {
     }
     let tryDecimals = tokenInstance.try_decimals();
     if (!tryDecimals.reverted) {
-      token1.decimals = BigInt.fromString(tryDecimals.value.toString());
+      token1.decimals = tryDecimals.value;
     } else {
-      token1.decimals = BigInt.fromString("18");
+      token1.decimals = 18;
     }
+
+    token0.save();
     token1.save();
+    entity.token0 = token0.id;
+    entity.token1 = token1.id;
+    entity.pair = event.params.pair;
+    entity.param3 = event.params.param3;
+
+    entity.blockNumber = event.block.number;
+    entity.blockTimestamp = event.block.timestamp;
+    entity.transactionHash = event.transaction.hash;
+
+    entity.save();
   }
-  entity.token0 = token0.id;
-  entity.token1 = token1.id;
-  entity.pair = event.params.pair;
-  entity.param3 = event.params.param3;
-
-  entity.blockNumber = event.block.number;
-  entity.blockTimestamp = event.block.timestamp;
-  entity.transactionHash = event.transaction.hash;
-
-  entity.save();
 }

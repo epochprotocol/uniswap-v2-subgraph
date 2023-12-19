@@ -198,17 +198,17 @@ export class Token extends Entity {
     this.set("name", Value.fromString(value));
   }
 
-  get decimals(): BigInt {
+  get decimals(): i32 {
     let value = this.get("decimals");
     if (!value || value.kind == ValueKind.NULL) {
-      throw new Error("Cannot return null for a required field.");
+      return 0;
     } else {
-      return value.toBigInt();
+      return value.toI32();
     }
   }
 
-  set decimals(value: BigInt) {
-    this.set("decimals", Value.fromBigInt(value));
+  set decimals(value: i32) {
+    this.set("decimals", Value.fromI32(value));
   }
 
   get symbol(): string {

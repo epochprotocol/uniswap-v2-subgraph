@@ -11,6 +11,6 @@ type Pair @entity(immutable: true) {
 type Token @entity(immutable: true) {
   id: Bytes!
   name: String!
-  decimals: BigInt!
+  decimals: Int!
   symbol: String!
 }
