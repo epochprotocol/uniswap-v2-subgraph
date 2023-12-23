@@ -4,10 +4,10 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ abhimanyu121/uniswap-v2",
-    "create-local": "graph create --node http://localhost:8020/ abhimanyu121/uniswap-v2",
-    "remove-local": "graph remove --node http://localhost:8020/ abhimanyu121/uniswap-v2",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 abhimanyu121/uniswap-v2",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/  akshitostwal/sushiswap-polygon",
+    "create-local": "graph create --node http://localhost:8020/  akshitostwal/sushiswap-polygon",
+    "remove-local": "graph remove --node http://localhost:8020/  akshitostwal/sushiswap-polygon",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001  akshitostwal/sushiswap-polygon2",
     "test": "graph test"
   },
   "dependencies": {
