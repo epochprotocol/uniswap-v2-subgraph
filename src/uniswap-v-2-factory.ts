@@ -23,9 +23,9 @@ export function handlePairCreated(event: PairCreatedEvent): void {
     }
     let tryDecimals = tokenInstance.try_decimals();
     if (!tryDecimals.reverted) {
-      token0.decimals = tryDecimals.value;
+      token0.decimals = BigInt.fromString(tryDecimals.value.toString());
     } else {
-      token0.decimals = 18;
+      token0.decimals = BigInt.fromString("18");
     }
   }
 
@@ -48,9 +48,9 @@ export function handlePairCreated(event: PairCreatedEvent): void {
     }
     let tryDecimals = tokenInstance.try_decimals();
     if (!tryDecimals.reverted) {
-      token1.decimals = tryDecimals.value;
+      token1.decimals = BigInt.fromString(tryDecimals.value.toString());
     } else {
-      token1.decimals = 18;
+      token1.decimals = BigInt.fromString("18");
     }
 
     token0.save();
