@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: UniswapV2Factory
-    network: bsc
+    network: arbitrum-one
     source:
-      address: "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73"
+      address: "0xA102072A4C07F06EC3B4900FDC4C7B80b6c57429"
       abi: UniswapV2Factory
-      startBlock: 6809737
+      startBlock: 294140
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
