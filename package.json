@@ -1,13 +1,13 @@
 {
-  "name": "uniswap-v2",
+  "name": "pancake-v2-bsc",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ abhimanyu121/uniswap-v2",
-    "create-local": "graph create --node http://localhost:8020/ abhimanyu121/uniswap-v2",
-    "remove-local": "graph remove --node http://localhost:8020/ abhimanyu121/uniswap-v2",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 abhimanyu121/uniswap-v2",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ epochprotocol/pancake-v2-bsc",
+    "create-local": "graph create --node http://localhost:8020/ epochprotocol/pancake-v2-bsc",
+    "remove-local": "graph remove --node http://localhost:8020/ epochprotocol/pancake-v2-bsc",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 epochprotocol/pancake-v2-bsc",
     "test": "graph test"
   },
   "dependencies": {
